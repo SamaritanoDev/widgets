@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CardBox extends StatelessWidget {
-  const CardBox({super.key});
+  final String title;
+  final String subtitle;
+  final IconData? icon;
+  final double width;
+  final double height;
+  const CardBox(
+      {super.key,
+      required this.title,
+      required this.subtitle,
+      this.icon,
+      required this.width,
+      required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +25,8 @@ class CardBox extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Container(
               margin: const EdgeInsets.only(top: 20, bottom: 20),
-              width: double.infinity,
-              height: 200,
+              width: width,
+              height: height,
               decoration: _cardBorders(),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -23,20 +34,20 @@ class CardBox extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Icon(Icons.favorite, color: Colors.white),
+                    children: [
+                      Icon(icon),
                       Text(
-                        'Github',
-                        style: TextStyle(
+                        title,
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
-                  const Text(
-                    '@Samaritano.dev',
-                    style: TextStyle(
+                  Text(
+                    subtitle,
+                    style: const TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.w300),

@@ -12,7 +12,11 @@ class CardsScreen extends StatelessWidget {
         title: const Text('Cards'),
       ),
       body: const Center(
-        child: CardBox(),
+        child: CardBox(
+            title: 'Github',
+            subtitle: '@Samaritano.dev',
+            width: double.infinity,
+            height: 200),
       ),
     );
   }
