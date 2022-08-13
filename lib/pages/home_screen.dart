@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.pink[800],
         title: const Text('Widgets'),
       ),
-      body: PageView(
+      body: ListView(
         children: [
           ListTile(
             title: const Text('Card'),
@@ -22,6 +22,18 @@ class HomeScreen extends StatelessWidget {
                 size: 40,
               ),
               onPressed: () => Navigator.pushNamed(context, 'cards'),
+            ),
+          ),
+          ListTile(
+            title: const Text('Buttons'),
+            subtitle: const Text('Botones con Elevate button y sin'),
+            trailing: IconButton(
+              icon: const Icon(
+                Icons.keyboard_arrow_right,
+                color: Colors.redAccent,
+                size: 40,
+              ),
+              onPressed: () => Navigator.pushNamed(context, 'buttons'),
             ),
           ),
         ],
