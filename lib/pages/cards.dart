@@ -6,9 +6,10 @@ class CardsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink[800],
+        backgroundColor: color.onPrimary,
         title: const Text('Cards'),
       ),
       body: const Center(

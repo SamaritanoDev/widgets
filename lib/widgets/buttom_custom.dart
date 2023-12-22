@@ -16,12 +16,13 @@ class ButtonCustom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(10),
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: Colors.redAccent,
+        color: color.secondary,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(

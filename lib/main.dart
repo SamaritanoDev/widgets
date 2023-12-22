@@ -13,10 +13,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter widgets',
       initialRoute: 'inicio',
+      theme: ThemeData(colorSchemeSeed: Colors.pinkAccent),
       routes: {
         'inicio': (context) => const HomeScreen(),
         'cards': (context) => const CardsScreen(),
         'buttons': (context) => const ButtonScreen(),
+        'mis widgets': (context) => const WidgetsCustomScreen(),
       },
     );
   }

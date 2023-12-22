@@ -6,15 +6,16 @@ class ButtonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink[800],
+        backgroundColor: color.onPrimary,
         title: const Text('Buttons'),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             _ButtonFlutter(),
             SizedBox(height: 20),
             ButtonCustom(title: 'en tik tok', width: 150, height: 50)
@@ -30,11 +31,15 @@ class _ButtonFlutter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final color = Theme.of(context).colorScheme;
     return ElevatedButton(
       onPressed: () {},
       style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(Colors.pink[800])),
-      child: const Text('Sigueme'),
+          backgroundColor: MaterialStateProperty.all(color.background)),
+      child: Text(
+        'Sigueme',
+        style: TextStyle(color: color.onBackground),
+      ),
     );
   }
 }
