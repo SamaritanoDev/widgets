@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:travel_app/src/utils/colors/appcolors.dart';
 
 class RatingRow extends StatelessWidget {
   const RatingRow({super.key});
