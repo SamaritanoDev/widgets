@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final color = Theme.of(context).colorScheme;
+    IconData myIconArrow = Icons.keyboard_arrow_right;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: color.primary,
@@ -18,7 +20,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: const Text('Tarjeta con BoxDecoration'),
             trailing: IconButton(
               icon: Icon(
-                Icons.keyboard_arrow_right,
+                myIconArrow,
                 color: color.primary,
                 size: 40,
               ),
@@ -30,7 +32,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: const Text('Botones con Elevate button y sin'),
             trailing: IconButton(
               icon: Icon(
-                Icons.keyboard_arrow_right,
+                myIconArrow,
                 color: color.primary,
                 size: 40,
               ),
@@ -42,11 +44,23 @@ class HomeScreen extends StatelessWidget {
             subtitle: const Text('buscador, etc'),
             trailing: IconButton(
               icon: Icon(
-                Icons.keyboard_arrow_right,
+                myIconArrow,
                 color: color.primary,
                 size: 40,
               ),
               onPressed: () => Navigator.pushNamed(context, 'mis widgets'),
+            ),
+          ),
+          ListTile(
+            title: const Text('Dropdown'),
+            subtitle: const Text('Mis Dropdowns'),
+            trailing: IconButton(
+              icon: Icon(
+                myIconArrow,
+                color: color.primary,
+                size: 40,
+              ),
+              onPressed: () => Navigator.pushNamed(context, 'dropdown'),
             ),
           ),
         ],

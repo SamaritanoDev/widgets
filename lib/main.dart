@@ -15,10 +15,11 @@ class MyApp extends StatelessWidget {
       initialRoute: 'inicio',
       theme: ThemeData(colorSchemeSeed: Colors.pinkAccent),
       routes: {
+        'mis widgets': (context) => const WidgetsCustomScreen(),
         'inicio': (context) => const HomeScreen(),
         'cards': (context) => const CardsScreen(),
         'buttons': (context) => const ButtonScreen(),
-        'mis widgets': (context) => const WidgetsCustomScreen(),
+        'dropdown': (context) => const DropdownPage(),
       },
     );
   }

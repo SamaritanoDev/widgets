@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WidgetsCustomScreen extends StatefulWidget {
-  const WidgetsCustomScreen({Key? key}) : super(key: key);
+  const WidgetsCustomScreen({super.key});
 
   @override
   State<WidgetsCustomScreen> createState() => _WidgetsCustomScreenState();

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets/widgets/buttom_custom.dart';
 
 class ButtonScreen extends StatelessWidget {
-  const ButtonScreen({Key? key}) : super(key: key);
+  const ButtonScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,18 +27,18 @@ class ButtonScreen extends StatelessWidget {
 }
 
 class _ButtonFlutter extends StatelessWidget {
-  const _ButtonFlutter({Key? key}) : super(key: key);
+  const _ButtonFlutter({super.key});
 
   @override
   Widget build(BuildContext context) {
     final color = Theme.of(context).colorScheme;
     return ElevatedButton(
       onPressed: () {},
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(color.background)),
+      style:
+          ButtonStyle(backgroundColor: WidgetStateProperty.all(color.surface)),
       child: Text(
         'Sigueme',
-        style: TextStyle(color: color.onBackground),
+        style: TextStyle(color: color.onSurface),
       ),
     );
   }
