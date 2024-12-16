@@ -63,6 +63,18 @@ class HomeScreen extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, 'dropdown'),
             ),
           ),
+          ListTile(
+            title: const Text('customs'),
+            subtitle: const Text('Mis customs'),
+            trailing: IconButton(
+              icon: Icon(
+                myIconArrow,
+                color: color.primary,
+                size: 40,
+              ),
+              onPressed: () => Navigator.pushNamed(context, 'customs'),
+            ),
+          ),
         ],
       ),
     );

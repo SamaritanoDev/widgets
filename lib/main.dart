@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/pages/custom_painter_page.dart';
 import 'package:widgets/pages/screens.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         'cards': (context) => const CardsScreen(),
         'buttons': (context) => const ButtonScreen(),
         'dropdown': (context) => const DropdownPage(),
+        'customs': (context) => const CustomPainterScreen(),
       },
     );
   }

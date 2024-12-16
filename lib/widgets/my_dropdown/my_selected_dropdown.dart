@@ -14,7 +14,6 @@ class MySelectedDropdown extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = Theme.of(context).colorScheme;
     return SizedBox(
       width: 200,
       child: DropdownButtonFormField<String>(
